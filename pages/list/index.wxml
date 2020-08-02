@@ -1,0 +1,22 @@
+<view class="list-boxs">
+	<view class="list-box" wx:for="{{dingzhiArr}}">
+		<image src="{{item.pro_pic_url}}" />
+		<view class="list-box-title">
+			{{item.pro_title}}
+		</view>
+		<view class="list-box-content">
+			<view>
+				<text class="iconfont icon-diliweizhi"></text>
+				{{item.country}} |
+			</view>
+			<view>
+				<text class="iconfont icon-shijian"></text>
+				{{item.routing_data}}天{{item.routing_nigth}}晚
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{endType}}">
+		快放手到底了
+	</view>
+</view>
+

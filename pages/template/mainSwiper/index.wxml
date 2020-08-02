@@ -1,0 +1,14 @@
+<template name="mainswiper">
+	<swiper class="swiper" indicator-dots="{{true}}">
+		<block wx:for="{{swiperList}}" wx:key="{{index}}">
+			<swiper-item>
+				<image
+				 class="swiper-image"
+				 src="{{item.photoUrl}}"
+				 class="slide-image"
+				/>
+			</swiper-item>
+		</block>
+	</swiper>
+</template>
+

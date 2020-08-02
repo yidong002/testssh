@@ -1,0 +1,83 @@
+.find{
+    background-color: #f2f2f2;
+    height: 100%;
+}
+.find-search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20rpx;
+}
+.search-btn{
+    color: gray;
+}
+.input{
+    width: 80%;
+    height: 90rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 40rpx;
+}
+.find-title-nav{
+    color: #445356;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border: solid grey 1rpx;
+    height: 60px;
+    margin-top: 20rpx;
+}
+.find-nav{
+    background-color: #878e90;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+.find-nav view{
+    color: #fff;
+    font-size: 14px;
+    margin: 20rpx;
+}
+.zhou-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.city{
+    border-radius: 50%;
+    color:#9b9b9b ;
+    border: solid #9b9b9b 1px;
+    font-size: 10px;
+    margin: 20rpx;
+    padding: 20rpx;
+}
+.cityclass{
+    background-color: gold;
+}
+/* 季节 */
+.jijie-content-item image{
+    width: 100%;
+    height: 240px;
+}
+.act{
+    border-bottom:#445356 solid 4px;
+}
+.display{
+    display: none;
+}
+
+
+
+
+
+

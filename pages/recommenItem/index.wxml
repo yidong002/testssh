@@ -1,0 +1,212 @@
+<view class="recommendItem-boxs">
+	<image src="{{itemList.product_base_info.pro_pic_url}}" />
+	<view class="recommendItem-boxs-content">
+		<view class="recommendItem-title">{{itemList.product_base_info.pro_title}}</view>
+		<view class="recommendItem-content-table">
+			<view class="shiyi">
+				<view>适宜季节</view>
+				<view>春意盎然，盛夏果实，秋来秋去</view>
+			</view>
+			<view class="shiyi">
+				<view>主题</view>
+				<view>人文历史，光影拍摄，风光休闲</view>
+			</view>
+			<view class="jia">
+				<view class="danjia">
+					<text class="iconfont icon-wuliaojiageleixing"></text>
+					单价
+				</view>
+				<view class="chengren">{{itemList.product_base_info.man_price}}元起</view>
+				<view class="child">{{itemList.product_base_info.children_price}}元起</view>
+			</view>
+			<view class="jia">
+				<view class="danjia">
+					<text class="iconfont icon-renshutongji"></text>
+					人数
+				</view>
+				<view class="chengren">4成人</view>
+				<view class="child">0儿童</view>
+			</view>
+			<view class="shiyi">
+				<view>
+					<text class="iconfont icon-shijian1"></text>
+					日期
+				</view>
+				<view>{{itemList.product_base_info.out_time}}</view>
+			</view>
+			<view class="shiyi">
+				<view>
+					<text class="iconfont icon-feiji800"></text>
+					出发
+				</view>
+				<view>{{itemList.product_base_info.out_address}}</view>
+			</view>
+			<view class="shiyi">
+				<view>
+					<text class="iconfont icon-shijian1"></text>
+					周期
+				</view>
+				<view>{{itemList.product_base_info.routing_dat}}天{{itemList.product_base_info.routing_nigth}}晚</view>
+			</view>
+			<view class="shiyi">
+				<view>
+					<text class="iconfont icon-diliweizhi"></text>
+					国家
+				</view>
+				<view>{{itemList.country}}</view>
+			</view>
+			<view class="shiyi">
+				<view>
+					<text class="iconfont icon-store"></text>
+					商铺
+				</view>
+				<view>{{itemList.seller_nick_name}}</view>
+			</view>
+		</view>
+		<view class="liangdian">
+			<view class="liangdianTitle">
+				行程亮点
+			</view>
+			<swiper
+			 class="swiper"
+			 autoplay="false"
+			 duration="2000"
+			>
+				<block wx:for="{{itemList.product_base_info.product_bright}}">
+					<swiper-item class="swiper-item">
+						<image class="liangdianSwiper-img" src="{{item.photoUrl}}" />
+						<view class="liangdianSwiper-con">
+							<view class="con-title">{{item.name}}</view>
+							<view>{{item.bright}}</view>
+						</view>
+					</swiper-item>
+				</block>
+
+			</swiper>
+		</view>
+		<view class="recommendItem-content-bottom">
+			<view class="recommendItem-title"> 定制旅行，有什么不同？</view>
+			<view class="recommendItem-content-bottom-nav {{type?'':'act'}}">
+				<view class="{{gaiyaoType? 'active':''}}">行程概要</view>
+				<view class="{{xiangxiType?'active':''}}">详细行程</view>
+				<view class="{{jiageType ?'active':''}}">价格说明</view>
+			</view>
+			<view class="recommendItem-content-bottom-con">
+				<view class="xingcheng" id="xingcheng">
+					<view class="xingchengTitle">
+						行程概要
+					</view>
+					<view class="xingchengContent">
+						<view class="contentcon" wx:for="{{itemList.product_base_info.product_trip_head}}">
+							<view class="contentId">
+								D{{item.day}}
+							</view>
+							<view class="content-detail">
+								<view>
+									{{item.trip_way}}
+								</view>
+								<view>
+									{{item.stay_name}}
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="xiangxi" id="xiangxi">
+					<view class="xingchengTitle">
+						详细行程
+
+					</view>
+					<view class="xiangxicontent">
+						<block wx:for="{{itemList.product_details_info.product_trip_details}}">
+							<view class="xiangxicontent-title">
+								day{{item.day}}
+							</view>
+							<view class="chufachenshi">
+								<view wx:for="{{item.newProductTripWayVO.tripCityVos}}">
+									{{item.cityName}}
+								</view>
+							</view>
+							<view class="hangban" wx:for="{{item.newProductTripWayVO.tripFlyVo}}">
+								<view class="tuijiantitle">参考航班{{index+1}}</view>
+								<view class="tuijianhangban">
+									<view class="startcity">
+										<view>
+											{{item.startCity}}
+										</view>
+										<view>
+											{{item.out_time}}
+										</view>
+									</view>
+									<view class="hangbanid">
+										{{item.vehicle_no}}
+									</view>
+									<view class="startcity">
+										<view>
+											{{item.endCity}}
+										</view>
+										<view>
+											{{item.arrive}}
+										</view>
+									</view>
+								</view>
+							</view>
+							<view class="xiangxiText">
+								<block wx:for="{{item.product_trip_poi}}">
+									<textarea class="text">{{item.emotion_info}}</textarea>
+								</block>
+							</view>
+							<swiper
+							 class="xiangxiSwiper"
+							 indicator-color="rgba(0,0,0,.3)"
+							 autoplay="false"
+							 interval="5000"
+							 duration="1000"
+							>
+								<block wx:for="{{item.product_trip_poi_pic}}">
+									<swiper-item class="xiangxiSwiperItem">
+										<image src="{{item.photo_url}}" />
+									</swiper-item>
+								</block>
+							</swiper>
+						</block>
+					</view>
+				</view>
+				<view class="jiage" id="jiage">
+					<view class="xingchengTitle">
+						价格说明
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="item-right">
+		<text bindtap="gohome" class="iconfont icon-icon_home"></text>
+		<view class="item-right-share">
+			<button open-type="share"></button>
+			<text class="iconfont icon-z"></text>
+		</view>
+	</view>
+	<view class="item-bottom">
+		<view class="item-bottom-left">
+			<view bindtap="phonecall">
+				<view class="iconfont icon-dianhua"></view>
+				<view class="icon-text">
+					电话
+				</view>
+			</view>
+			<view>
+				<view class=" kefu-icon iconfont icon-lianxikefu1"></view>
+				<button open-type="contact" class="kefu">
+					客服
+				</button>
+			</view>
+		</view>
+		<view class="item-bottom-right">
+			立即定制
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,10 @@
+
+<view class="custom-title">
+    <view wx:for="{{titleArr}}">
+        <view class="title-id">
+            {{item.id}}
+        </view>
+        <view class="title-content">{{item.content}}</view>  
+    </view>
+</view>
+  

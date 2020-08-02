@@ -1,0 +1,23 @@
+<template name="gussList">
+	<view class="guss-boxs">
+		<block wx:for="{{gussList}}">
+			<view
+			 class="guss-box"
+			 bindtap="gussItem"
+			 data-id="{{item.productId}}"
+			>
+				<image class="guss-image" src="{{item.proPicUrl}}" />
+				<view class="guss-box-content">
+					<view class="guss-box-content-title"> {{item.proTitle}}</view>
+					<view> {{item.country}}</view>
+					<view class="guss-content-bottom"> {{item.routingDat}}天{{item.routingNigth}}晚
+						<view>
+							{{item.amount}}元起
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</template>
+

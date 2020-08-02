@@ -1,0 +1,32 @@
+<template name="recommendList">
+	<view class="commendboxs">
+		<view
+		 class="commendbox"
+		 wx:for="{{recommendList}}"
+		 bindtap="recommendItem"
+		 data-id="{{item.productId}}"
+		>
+			<image class="recommend-image" src="{{item.proPicUrl}}" />
+			<view class="commend-box-con">
+				<view class="recom-box-con-title">
+
+					{{item.proTitle}}
+				</view>
+				<view class="recom-box-con-country">
+					<text class="iconfont icon-diliweizhi"></text>
+					{{item.country}}
+				</view>
+				<view class="recom-box-con-bottom">
+					<view>
+
+						{{item.routingDat}}天{{item.routingNigth}}晚
+					</view>
+					<view>
+						{{item.amount}}元起
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+

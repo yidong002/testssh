@@ -1,0 +1,266 @@
+.recommendItem-boxs image{
+    height: 400rpx;
+    width: 750rpx;
+}
+.recommendItem-title{
+    background-color: #ddd;
+    font-size: 14px;
+    height: 35px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+}
+.shiyi{
+    color: gray;
+    margin: 20rpx;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #7e7e7e;
+    font-size: 10px;
+    margin-top: 10rpx;
+    padding: 20rpx;
+}
+.danjia{
+    width: 50%;
+    border-right: gray 1px solid;
+}
+.chengren{
+    width: 25%;
+    border-right: 1px solid gray;
+}
+.item-right{
+    position: fixed;
+    right: 0;
+    bottom: 240rpx;
+    width: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.recommendItem-content-bottom{
+    margin-top: 10rpx;
+    margin-bottom: 120rpx;
+}
+.recommendItem-content-bottom-nav{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100rpx;
+
+    color: #cbcaca;
+
+}
+.swiper{
+    height: 750px;
+    width: 100%;
+}
+.swiper-item{
+    height: 100%;
+    width: 100%;
+}
+.swiper .swiper-item .liangdianSwiper-img{
+    width: 100%;
+    height: 544px;
+}
+.swiper .swiper-item .liangdianSwiper-con{
+    color: #8b8b8b;
+    font-size: 12px;
+    margin-top: 40rpx;
+}
+.swiper .swiper-item .liangdianSwiper-con .con-title{
+    font-size: 22px;
+    text-align: end;
+    margin-bottom: 20rpx;
+}
+.act{
+    display: none;
+}
+.active{border-bottom:2px solid #445356;}
+.xingcheng{
+    margin-top: 40rpx;
+    border-bottom:10rpx solid #d8dadb ;
+}
+.contentcon{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    border-bottom: 1px solid gray;
+}
+.content-detail{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #666666;
+    align-items: center;
+    margin-left: 40rpx;
+}
+.contentId{
+    font-size: 14px;
+    color: #fafafa;
+    background-color: #758082;
+    text-align: center;
+    height: 120rpx;
+    width: 120rpx;
+    line-height: 120rpx;
+    border-radius: 50%;
+}
+.xiangxi{
+    margin-top: 40rpx;
+    border-bottom:10rpx solid #d8dadb ;
+    height: auto;
+}
+.xiangxicontent-title{
+    color: #445356;
+    font-family: 'SingleMaltaRegular';
+    font-size: 30px;
+    height: 60px;
+    width: 140px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px;
+}
+.chufachenshi{
+    color: #666666;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+
+}
+.tuijiantitle{
+    text-align: center;
+    color: gray;
+}
+.tuijianhangban{
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.startcity{
+    display: flex;
+    flex-direction: column;
+}
+.jiage{
+    margin-top: 40rpx;
+    height: 1000rpx;
+    background-color: gray;
+
+}
+
+.text{
+    word-break: break-all;
+    text-indent: 2em;
+    color: gray;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+}
+.xiangxiSwiper{
+    text-align: center;
+}
+.xiangxiSwiper .xiangxiSwiperItem image{
+    width: 80%;
+    height: 700rpx;
+}
+.xingchengTitle{
+    background: url('http://www.51houniao.com//wx/customer/classic/lib/images/title_bg_03.png') center center no-repeat;
+    height: 100rpx;
+    width: 100%;
+    margin-top: 10rpx;
+    line-height: 100rpx;
+    text-align: center;
+
+}
+
+
+
+.item-right-share {
+    position: relative;
+    margin-top: 5rpx;
+}
+
+.item-right-share text{
+    position: absolute;
+    left:  0;
+    top: 0;
+    width: 60rpx;
+    height: 60rpx;
+}
+.item-right-share button{
+    position: absolute;
+    z-index: 100;
+    left:  0;
+    top: 0;
+    width: 30px;
+    opacity: 0;
+    height: 60rpx;
+}
+.item-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.item-bottom-right{
+    background-color: gold;
+    height: 120rpx;
+    width: 30%;
+    color: #fff;
+    line-height: 120rpx;
+    text-align: center;
+}
+.item-bottom-left{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 70%;
+    border: solid gray 1px;
+}
+.item-bottom-left view{
+    display: flex;
+    margin-left: 20rpx;
+    flex-direction: column;
+    line-height: 120rpx;
+    position: relative;
+}
+.icon-text{
+    font-size: 10px;
+}
+.kefu{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 40rpx;
+    opacity: 0;
+}
+.kefu-icon{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 40rpx;
+}

@@ -1,0 +1,21 @@
+<!--pages/Hmain/Hmain.wxml-->
+<!-- 导入轮播模板 -->
+<import src="../template/mainSwiper/index" />
+<import src="../template/recommend/index" />
+<import src="../template/gussyoulike/index" />
+<text>候鸟首页</text>
+<template is="mainswiper" data="{{swiperList}}"></template>
+<image class="img" src="../../images/navimg.png" />
+<view class="recommend-title">
+	推荐
+	<text class="iconfont icon-LC_icon_down_line_circle"></text>
+</view>
+<template is="recommendList" data="{{recommendList}}"></template>
+
+<view class="gussyoulike-title">
+	猜你喜欢
+</view>
+<template is="gussList" data="{{gussList}}">
+
+</template>
+

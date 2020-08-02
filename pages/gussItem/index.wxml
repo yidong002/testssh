@@ -1,0 +1,7 @@
+<view class="gussItem-boxs">
+	<image src="{{gussItemList.product_base_info.pro_pic_url}}" />
+	<view class="gussItem-boxs-content">
+		<view class="gusssItem-boxs-content-title">{{gussItemList.product_base_info.pro_title}}</view>
+	</view>
+</view>
+

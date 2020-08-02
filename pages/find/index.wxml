@@ -1,0 +1,49 @@
+<view class="find">
+	<view class="find-search">
+		<input
+		 class="input"
+		 type="text"
+		 placeholder="请输入您想去的国家或城市"
+		 bindinput="searchValue"
+		/>
+		<view class="search-btn" bindtap="toList">
+			搜索
+		</view>
+	</view>
+	<view class="find-title-nav">
+		<view class="zhou {{zhouType?'act':''}}" bindtap="forzhou">
+			洲
+		</view>
+		<view class="jijie {{jijieType?'act':''}}" bindtap="forjijie">季节</view>
+	</view>
+	<view class="find-nav {{zhouType?'':'display'}}">
+		<view
+		 wx:for="{{zhouList}}"
+		 bindtap="chengeCity"
+		 data-id="{{item}}"
+		 class="{{cityType?'cityclass':''}}"
+		>
+			{{item}}
+		</view>
+	</view>
+	<view class="find-nav {{jijieType?'':'display'}}">
+		<view wx:for="{{jijieList}}">
+			{{item}}
+		</view>
+	</view>
+	<!-- 城市展示 -->
+	<view class="zhou-content">
+		<view class="city" wx:for="{{cityList}}">
+			{{item.country}}
+		</view>
+	</view>
+	<!-- 季节内容展示 -->
+	<view class="jiejie-content">
+		<block wx:for="{{jijiecontentList}}">
+			<view class="jijie-content-item">
+				<image src="{{item.pro_pic_url}}" />
+			</view>
+		</block>
+	</view>
+</view>
+
